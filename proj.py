@@ -148,7 +148,6 @@ def obj_det(tk_frame, tk_label):
         fps = 1 / time1
 
         if cv2.waitKey(1) == ord('q'):
-            terminate()
             break
 
     cv2.destroyAllWindows()
@@ -324,9 +323,6 @@ def calendar(person, calendar_ID = "primary"):
     except HttpError as error:
         print(f"An error occurred: {error}")
         quit()
-
-def terminate():
-    display_window.destroy()
 
 display_window = tk.Tk()
 display_window.geometry('1920x1080')
